@@ -1,0 +1,91 @@
+
+
+
+1. JS runtime environment with js library
+2. features:
+    - extremely faster
+    - based on asynchronus programming
+    - single threaded with event loop
+    - highly scalable
+    - open source
+3. node JS global object
+    - it can access anywhere from node JS app without exporting / importing
+    - ex: console,log(),etTimeOut(),...
+4. node JS module system
+    - each file node js app is considered as seperate module. to reuse modules we have export and import
+    - to import a module: use require('module name') method
+    - to export a module: module.exports / exports keyword
+    - built in modules
+        - fs: file system - handling file related events
+        - http: generating http requests
+        - https: generating https requests
+        - event: generating event
+        - crypto: tool like encryption,hashing etc..
+        - process: used to provide currently running process information
+            -environmental variable: used to store runtime values
+5. node js packages
+    - used to help solving common problems
+    - collection of node_modules & package.json
+    - install package: npm i package-name
+    - creates package.json: npm configuration file for project
+    - node_modules folder: used to hold copies of installed packages
+    - package-lock.json: to hold version of installed packages
+6. backend concepts
+    - client server architecture: sending req and res between 2 applications
+    - API: application programming interface
+    - RESTful API: http request with json data
+    - CRUD: create,read,update,delete
+    - CROS: cross origin resource sharing
+-----------------------------------------
+express js
+-----------------------------------------
+1. framework for resolving client server app of node js
+2. create a server folder
+3. create package.json file: use command-> npm init -y
+4. update start command as "start":"node index.js" in scripts of package.json
+5. install packages
+    - express: npm i express
+    - cors: npm i cors
+    - dotenv: npm i dotenv
+6. create .env file to hold environmental variables
+7. create .gitignore to add file to ignore 
+8. create index.js file to define server
+    - import dotenv
+    - import express
+    - import cors
+    - create express server
+    - use folowing in server:
+        - cors 
+        - parser for json
+    - customise port to listen http request
+9. create routes folder in server to define routes
+    - create router.js file
+        - import express
+        - create router object of express to define path
+        - using router object define path
+10. create controller folder in server to define logic to solve API
+    - create controller.js file
+        - create function to solve request
+        
+-----------------------------------------------------
+MongoDB : used to store large amount of data permenantly
+-----------------------------------------------------
+
+1. difference between sql and MongoDB
+                       SQL                                       MongoDB
+            --------------------------                   --------------------------
+            - relational Dbms                           - document oriented NoSQL DB
+            - data stored in table                      - collection of json documents
+               with rows & columns
+            - uses fixed schema                         - uses dynamic schema
+            - used to optimise complex                  - optimised for scalability & 
+              join and transaction                        performance
+            - support rich set of data types            - limited set of data types                             
+            - declarative query lang                    - expressive query lang based on
+                                                          json
+            - ACID (Atomicity,consistancy,              - NoSQL based on CAP (Consistancy,                                                   
+              isolation and durability)                   Availability and partition tolerance)
+              property                                    property
+            - uses traditional buisness app             - used in big data and real time web app
+
+2. Commands in MongoDB
